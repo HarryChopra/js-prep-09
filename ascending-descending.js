@@ -25,6 +25,15 @@ function descendingOrder(n) {
 
 console.log(descendingOrder(21445));
 
-// function descendingOrder(n){
-
-// }
+function ascendingOrder(n) {
+	var arrN = Array.from(String(n), Number);
+	for (let i of arrN) {
+		for (let j = 0; j < arrN.length - 1; j++) {
+			if (arrN[j] > arrN[j + 1]) {
+				[arrN[j], arrN[j + 1]] = [arrN[j + 1], arrN[j]];
+			}
+		}
+	}
+	return arrN.join('');
+}
+console.log(ascendingOrder(51432));
