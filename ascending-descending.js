@@ -20,7 +20,7 @@ function descendingOrder(n) {
 			}
 		}
 	}
-	return arrN.join('');
+	return Number(arrN.join(''));
 }
 
 console.log(descendingOrder(21445));
@@ -34,6 +34,6 @@ function ascendingOrder(n) {
 			}
 		}
 	}
-	return arrN.join('');
+	return Number(arrN.join(''));
 }
 console.log(ascendingOrder(51432));
