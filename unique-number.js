@@ -24,5 +24,22 @@ function findUniq(arr) {
 	}
 }
 
+//Without a data structure
+
+function findUniq(arr) {
+	let notUniq;
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] === arr[i + 1] || arr[i] === arr[i + 2]) {
+			notUniq = arr[i];
+			break;
+		}
+	}
+	for (let j of arr) {
+		if (j !== notUniq) {
+			return j;
+		}
+	}
+}
+
 console.log(findUniq([1, 1, 1, 2, 1, 1]));
 console.log(findUniq([0, 0, 0.55, 0, 0]));
