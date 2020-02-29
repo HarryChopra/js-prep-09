@@ -4,3 +4,18 @@
 // toCamelCase("the-stealth-warrior") // returns "theStealthWarrior"
 
 // toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior"
+
+function toCamelCase(str) {
+	if (str === '') return '';
+	let arr = [];
+	if (str.includes('-')) arr = str.split('-');
+	else arr = str.split('_');
+
+	for (let i = 1; i < arr.length; i++) {
+		arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+	}
+	return arr.join('');
+}
+
+console.log(toCamelCase('the-stealth-warrior'));
+console.log(toCamelCase('The_Stealth_Warrior'));
