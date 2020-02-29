@@ -5,3 +5,25 @@
 // Can Vasya sell a ticket to every person and give change if he initially has no money and sells the tickets strictly in the order people queue?
 
 // Return YES, if Vasya can sell a ticket to every person and give change with the bills he has at hand at that moment. Otherwise return NO.
+
+function tickets(peopleInLine) {
+	// ...
+	let collection = 0;
+	let changeNeeded = 0;
+	for (let money of peopleInLine) {
+		if (money - 25 > collection) return 'No';
+		else {
+			collection += money;
+			console.log(collection);
+			if (money > 25) {
+				collection -= money - 25;
+				console.log(collection);
+			}
+		}
+	}
+	return 'Yes';
+}
+
+// console.log(tickets([25, 25, 50])); // => YES
+// console.log(tickets([25, 100])); //) => NO. Vasya will not have enough money to give change to 100 dollars
+console.log(tickets([25, 25, 50, 50, 100])); // => NO. Vasya will not have the right bills to give 75 dollars of change (you can't make two bills of 25 from one of) 50))
