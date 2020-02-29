@@ -17,5 +17,5 @@ function toCamelCase(str) {
 	return arr.join('');
 }
 
-console.log(toCamelCase('the-stealth-warrior'));
-console.log(toCamelCase('The_Stealth_Warrior'));
+// console.log(toCamelCase('the-stealth-warrior'));
+// console.log(toCamelCase('The_Stealth_Warrior'));
